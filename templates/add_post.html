@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!doctype htlm>
+<html>
+    <head>
+        <title>Add New Post</title>
+    </head>
+</html>
+<body>
+    <h1>Add New Post</h1>
+    <form method ='GET'>
+        <label>
+            Post Title:
+            <input type="text" name="title" value='{{title}}'/> 
+        </label> <br>
+        <p class='error'>{{title_error}}</p>
+
+        <label>
+            Post:
+            <input type="text" name="post" value='{{body}}' />
+        </label> <br>
+        <p class='error'>{{body_error}}</p>
+        <input type="submit" value='Add Post' />
+    </form>
+</body>
+
+
+{% endblock %}

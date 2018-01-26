@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <style>
+        hr {
+        border: 0;
+        width: 80%;
+        color: rgb(189, 113, 113);
+        background-color: rgb(189, 113, 113);
+        height: 5px;
+        }
+    </style>
+
+    <h1>{{title}}</h1>
+
+    {% if name|length == 0%}
+    <p>No posts yet</p>
+    
+    {% else %}
+        <ul>
+            {% for title in blog.title %}
+            <a href="./blog?id={{blog.id}}"{{blog.title}}</a> <br>
+                {{blog.body}} <br> 
+                        <hr> <br>
+            {% endfor %}
+        </ul>
+
+        <hr>
+    
+
+
+    {% endif %}
+{% endblock %}
+
+
+
